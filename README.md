@@ -105,3 +105,46 @@ Home.js > updated & Jumbotron
 Portfolio.js > updated
 WebDesign.js > updated
 MernRender.js > added
+
+.steps for second commit, ect: Open new terminal or command prompt in VSCode
+
+1. git add . (space between add .)
+2. git status (shows staged files ready to commit in green)
+3. git commit -m "2nd Commit add static data and steps for second commit" (I copy and paste this)
+4. git status (tells us that everything is committed "working tree clean" on main branch)
+5. git push
+
+GIT 1st Commit
+Now you can check repository for updated code.
+
+# 4th Commit-backend MongoDB, Portfolio Static Data
+
+Terminal: mkdir backend (Root of portfolio)
+cd backend > npm init -y creates {}package.json
+Create MongoDB connection string
+https://www.mongodb.com/ to save and retrieve data from the database
+
+BACKEND
+folder: models
+userModel.js > added
+websiteModel.js > added
+
+folder: routes
+seedRoutes.js > added
+
+data.js > added (website data)
+server.js > added
+.env.example > added
+
+FRONTEND
+folder: public
+images > added images
+
+folder: components
+WebsiteCard > added
+
+folder: pages
+Portfolio.js > updated
+
+utils.js > added for error handling
+GIT 4th Commit
