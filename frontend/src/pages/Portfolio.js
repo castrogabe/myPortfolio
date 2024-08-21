@@ -1,43 +1,40 @@
-import React, { useEffect, useState } from 'react'; // Import React hooks for state and side effects
-import { Col, Row } from 'react-bootstrap'; // Import Bootstrap components for layout
-import { Helmet } from 'react-helmet'; // Import Helmet for managing document head
-import axios from 'axios'; // Import axios for making API requests
-import WebsiteCard from '../components/WebsiteCard'; // Import the WebsiteCard component for displaying website details
-import { getError } from '../utils'; // Import the helper function to format errors
+import React, { useEffect, useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
+import axios from 'axios';
+import WebsiteCard from '../components/WebsiteCard';
+import { getError } from '../utils';
 
 function Portfolio() {
-  const [websites, setWebsites] = useState([]); // Define state to store fetched websites
-  const [error, setError] = useState(null); // Define state to store any errors
+  const [websites, setWebsites] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      // Asynchronous function to fetch website data
       try {
-        const { data } = await axios.get('/api/websites'); // Get website data from API endpoint
-        setWebsites(data); // Update websites state with fetched data
+        const { data } = await axios.get('/api/websites');
+        setWebsites(data);
       } catch (error) {
-        setError(getError(error)); // Use getError to format and store the error
+        setError(getError(error)); // Use getError to handle the error
       }
     };
 
-    fetchData(); // Call the fetchData function on component mount
-  }, []); // Empty dependency array ensures fetchData runs only once
+    fetchData();
+  }, []);
 
   return (
     <>
       <Helmet>
-        <title>Portfolio</title> {/* Set the page title */}
+        <title>Portfolio</title>
       </Helmet>
       <div className='content'>
         <br />
         {error ? (
-          <div>Error fetching data: {error}</div> // Display error message if encountered
+          <div>Error fetching data: {error}</div> // Display the error message
         ) : (
           <Row>
             {websites.map((website, index) => (
               <Col md={12} className='box' key={index}>
-                {' '}
-                {/* Loop through websites and render each with WebsiteCard */}
                 <WebsiteCard website={website} />
               </Col>
             ))}
@@ -49,3 +46,6 @@ function Portfolio() {
 }
 
 export default Portfolio;
+
+// step 1 (AddWebSiteForm)
+// step 2 (Portfolio)

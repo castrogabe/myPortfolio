@@ -1,12 +1,12 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 const BottomFooter = () => {
   return (
     <div className='bottom-footer'>
-      <Row>
-        <Col className='text-center'>&copy; your.com</Col>
-      </Row>
+      <Col className='text-center mt-3'>
+        &copy;{new Date().getFullYear()} myportfolio.com
+      </Col>
     </div>
   );
 };

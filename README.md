@@ -148,3 +148,35 @@ Portfolio.js > updated
 
 utils.js > added for error handling
 GIT 4th Commit
+
+# 5th Commit-Admin Login
+
+BACKEND
+folder: models
+websiteModel > updated for url link
+
+folder: routes
+userRoutes > added
+
+data.js > updated with url link
+server.js > updated
+utils.js > added
+
+FRONTEND
+folder: components
+(new folder in components) forms
+Signin.js > added (forms)
+Signup.js > added (forms)
+AdminRoute.js > added
+Header.js > updated for admin (dropdown)
+.Website Dashboard
+.Users
+.Websites
+.Messages
+BottomFooter.js > updated
+
+App.js > updated
+index.js > updated with StoreProvider
+index.html > updated with font-awesome
+Store.js > added
+GIT 5th Commit
